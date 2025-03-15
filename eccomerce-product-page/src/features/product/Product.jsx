@@ -2,6 +2,7 @@ import {
 	ProductCarousel,
 	ProductDescription,
 	ProductQuantitySelector,
+	AddCartButton,
 } from "./";
 
 function Product() {
@@ -12,6 +13,8 @@ function Product() {
 			<div className="p-5">
 				<ProductDescription />
 				<ProductQuantitySelector />
+
+				<AddCartButton />
 			</div>
 		</section>
 	);
