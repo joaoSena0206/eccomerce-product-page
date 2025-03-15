@@ -1,6 +1,6 @@
 function ProductDescription() {
 	return (
-		<div className="p-5">
+		<div>
 			<div>
 				<h2 className="text-[#99989D] font-bold mb-3">
 					SNEAKER COMPANY

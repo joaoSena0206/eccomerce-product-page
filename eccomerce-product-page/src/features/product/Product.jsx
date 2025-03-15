@@ -1,10 +1,18 @@
-import { ProductCarousel, ProductDescription } from "./";
+import {
+	ProductCarousel,
+	ProductDescription,
+	ProductQuantitySelector,
+} from "./";
 
 function Product() {
 	return (
 		<section>
 			<ProductCarousel />
-			<ProductDescription />
+
+			<div className="p-5">
+				<ProductDescription />
+				<ProductQuantitySelector />
+			</div>
 		</section>
 	);
 }
