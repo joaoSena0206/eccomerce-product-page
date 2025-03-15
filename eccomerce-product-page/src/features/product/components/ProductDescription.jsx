@@ -25,7 +25,7 @@ function ProductDescription() {
 					</div>
 				</div>
 
-				<p className="text-[#6B6B6D]">
+				<p className="text-[#6B6B6D] font-bold">
 					<s>$250.00</s>
 				</p>
 			</div>
