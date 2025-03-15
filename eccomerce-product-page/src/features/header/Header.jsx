@@ -9,23 +9,26 @@ import {
 } from "./";
 
 function Header() {
-	let [isOpen, setIsOpen] = useState(false);
+	let [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	function handleOpenMenuClick() {
-		setIsOpen(true);
+		setIsMenuOpen(true);
 	}
 
 	function handleCloseMenuClick() {
-		setIsOpen(false);
+		setIsMenuOpen(false);
 	}
 
 	return (
 		<header className="flex justify-between p-7">
-			<Backdrop isOpen={isOpen} onClick={handleCloseMenuClick} />
+			<Backdrop isOpen={isMenuOpen} onClick={handleCloseMenuClick} />
 
 			<div className="flex space-x-5 items-center">
 				<MobileMenu onClick={handleOpenMenuClick} />
-				<SidebarMenu isOpen={isOpen} onClick={handleCloseMenuClick} />
+				<SidebarMenu
+					isOpen={isMenuOpen}
+					onClick={handleCloseMenuClick}
+				/>
 
 				<Logo />
 			</div>
