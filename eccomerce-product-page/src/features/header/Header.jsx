@@ -9,7 +9,7 @@ function Header() {
 				<Logo />
 			</div>
 
-			<div className="flex space-x-5">
+			<div className="flex space-x-5 items-center">
 				<CartIcon />
 
 				<UserProfile />
