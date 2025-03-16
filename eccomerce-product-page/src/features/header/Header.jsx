@@ -3,9 +3,8 @@ import { Logo, MobileMenu, UserProfile, SidebarMenu, Backdrop } from "./";
 import Cart from "../cart";
 import { CartIcon } from "../cart";
 
-function Header() {
+function Header({ onCartClick }) {
 	let [isMenuOpen, setIsMenuOpen] = useState(false);
-	let [isCartOpen, setIsCartOpen] = useState(false);
 
 	function handleOpenMenuClick() {
 		setIsMenuOpen(true);
@@ -13,10 +12,6 @@ function Header() {
 
 	function handleCloseMenuClick() {
 		setIsMenuOpen(false);
-	}
-
-	function handleCartClick() {
-		setIsCartOpen(isCartOpen ? false : true);
 	}
 
 	return (
@@ -34,8 +29,7 @@ function Header() {
 			</div>
 
 			<div className="flex space-x-5 items-center">
-				<CartIcon onClick={handleCartClick} />
-				<Cart isOpen={isCartOpen} />
+				<CartIcon onClick={onCartClick} />
 
 				<UserProfile />
 			</div>

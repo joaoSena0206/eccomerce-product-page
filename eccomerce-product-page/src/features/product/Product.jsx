@@ -5,16 +5,20 @@ import {
 	AddCartButton,
 } from "./";
 
-function Product() {
+function Product({ onAddCart, onIncreaseClick, onDecreaseClick, product }) {
 	return (
 		<section>
 			<ProductCarousel />
 
 			<div className="p-5">
-				<ProductDescription />
-				<ProductQuantitySelector />
+				<ProductDescription product={product} />
+				<ProductQuantitySelector
+					quantity={product.quantity}
+					onDecreaseClick={onDecreaseClick}
+					onIncreaseClick={onIncreaseClick}
+				/>
 
-				<AddCartButton />
+				<AddCartButton onClick={onAddCart} />
 			</div>
 		</section>
 	);
