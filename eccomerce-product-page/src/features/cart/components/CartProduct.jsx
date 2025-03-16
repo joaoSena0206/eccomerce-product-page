@@ -1,10 +1,12 @@
 import DeleteIcon from "./DeleteIcon";
 
-function CartProduct({ product }) {
+function CartProduct({ product, onDelete }) {
 	let productTotalPrice = product.price * product.quantity;
 
 	return (
-		<div className="flex space-x-3 items-center justify-between">
+		<div
+			key={product.id}
+			className="flex space-x-3 items-center justify-between">
 			<img
 				className="w-[80px] h-[80px] rounded-md"
 				src={product.img}
@@ -22,7 +24,7 @@ function CartProduct({ product }) {
 				</div>
 			</div>
 
-			<DeleteIcon />
+			<DeleteIcon onClick={onDelete} />
 		</div>
 	);
 }

@@ -6,6 +6,7 @@ import Cart from "./features/cart";
 import { useState } from "react";
 
 let productData = {
+	id: 1,
 	price: 125.0,
 	lastPrice: 250.0,
 	discount: 0,
@@ -50,6 +51,10 @@ function App() {
 		setProducts([...products, product]);
 	}
 
+	function handleDeleteCart(productId) {
+		setProducts(products.filter((p) => p.id != productId));
+	}
+
 	return (
 		<>
 			<Header onCartClick={handleCartClick} />
@@ -61,7 +66,13 @@ function App() {
 				product={product}
 			/>
 
-			<Cart isOpen={isCartOpen} products={products} />
+			<Cart
+				isOpen={isCartOpen}
+				products={products}
+				onDelete={() => {
+					handleDeleteCart(product.id);
+				}}
+			/>
 		</>
 	);
 }

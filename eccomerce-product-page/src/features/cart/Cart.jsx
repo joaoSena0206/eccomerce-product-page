@@ -1,6 +1,6 @@
 import CartProduct from "./components/CartProduct";
 
-function Cart({ isOpen, products = [] }) {
+function Cart({ isOpen, products = [], onDelete }) {
 	let emptyCartMessage = (
 		<p className="absolute font-bold text-[#6C6D72] top-1/2 left-1/2 -translate-1/2">
 			Your cart is empty.
@@ -19,6 +19,7 @@ function Cart({ isOpen, products = [] }) {
 						? products.map((product, index) => {
 								return (
 									<CartProduct
+										onDelete={onDelete}
 										key={index}
 										product={product}
 									/>
