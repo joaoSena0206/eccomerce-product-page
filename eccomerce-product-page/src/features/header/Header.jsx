@@ -1,13 +1,7 @@
 import { useState } from "react";
-import {
-	Logo,
-	CartIcon,
-	MobileMenu,
-	UserProfile,
-	SidebarMenu,
-	Backdrop,
-	Cart,
-} from "./";
+import { Logo, MobileMenu, UserProfile, SidebarMenu, Backdrop } from "./";
+import Cart from "../cart";
+import { CartIcon } from "../cart";
 
 function Header() {
 	let [isMenuOpen, setIsMenuOpen] = useState(false);
