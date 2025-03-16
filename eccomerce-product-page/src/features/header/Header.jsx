@@ -6,10 +6,12 @@ import {
 	UserProfile,
 	SidebarMenu,
 	Backdrop,
+	Cart,
 } from "./";
 
 function Header() {
 	let [isMenuOpen, setIsMenuOpen] = useState(false);
+	let [isCartOpen, setIsCartOpen] = useState(false);
 
 	function handleOpenMenuClick() {
 		setIsMenuOpen(true);
@@ -17,6 +19,10 @@ function Header() {
 
 	function handleCloseMenuClick() {
 		setIsMenuOpen(false);
+	}
+
+	function handleCartClick() {
+		setIsCartOpen(isCartOpen ? false : true);
 	}
 
 	return (
@@ -34,7 +40,8 @@ function Header() {
 			</div>
 
 			<div className="flex space-x-5 items-center">
-				<CartIcon />
+				<CartIcon onClick={handleCartClick} />
+				<Cart isOpen={isCartOpen} />
 
 				<UserProfile />
 			</div>
