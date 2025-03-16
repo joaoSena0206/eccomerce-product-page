@@ -6,7 +6,7 @@ function Cart({ isOpen }) {
 
 				<hr className="-ml-5 -mr-5 mb-5 border-[#dddcdc]"></hr>
 
-				<div className="h-[250px] relative">
+				<div className="min-h-[250px] relative">
 					<p className="font-bold text-[#6C6D72] absolute top-1/2 left-1/2 -translate-1/2">
 						Your cart is empty.
 					</p>
