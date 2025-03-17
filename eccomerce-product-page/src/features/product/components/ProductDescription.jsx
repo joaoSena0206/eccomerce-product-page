@@ -12,7 +12,7 @@ function ProductDescription({ product }) {
 				<p className="text-[#6B6B6D] mb-3">{product.description}</p>
 			</div>
 
-			<div className="flex items-center justify-between">
+			<div className="flex items-center justify-between lg:block">
 				<div className="flex items-center space-x-3">
 					<p className="font-bold text-[30px]">
 						${product.price.toFixed(2)}

@@ -2,7 +2,7 @@ function CartIcon({ color = "#69707D", onClick }) {
 	return (
 		<svg
 			onClick={onClick}
-			className="w-[25px] h-[25px]"
+			className="w-[25px] h-[25px] cursor-pointer"
 			width="22"
 			height="20"
 			xmlns="http://www.w3.org/2000/svg">

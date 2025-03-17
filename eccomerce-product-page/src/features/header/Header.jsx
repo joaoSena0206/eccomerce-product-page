@@ -1,6 +1,12 @@
 import { useState } from "react";
-import { Logo, MobileMenu, UserProfile, SidebarMenu, Backdrop } from "./";
-import Cart from "../cart";
+import {
+	Logo,
+	MobileMenu,
+	UserProfile,
+	SidebarMenu,
+	Backdrop,
+	NavigationPc,
+} from "./";
 import { CartIcon } from "../cart";
 
 function Header({ onCartClick }) {
@@ -15,7 +21,7 @@ function Header({ onCartClick }) {
 	}
 
 	return (
-		<header className="flex justify-between p-7">
+		<header className="flex justify-between p-7 lg:px-20">
 			<Backdrop isOpen={isMenuOpen} onClick={handleCloseMenuClick} />
 
 			<div className="flex space-x-5 items-center">
@@ -26,6 +32,8 @@ function Header({ onCartClick }) {
 				/>
 
 				<Logo />
+
+				<NavigationPc />
 			</div>
 
 			<div className="flex space-x-5 items-center">
