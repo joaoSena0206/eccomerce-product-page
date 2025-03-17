@@ -9,7 +9,7 @@ function Cart({ isOpen, products = [], onDelete }) {
 
 	return (
 		isOpen && (
-			<div className="absolute top-[90px] rounded-md p-5 z-20 left-1/2 -translate-x-1/2 bg-white w-[95%]">
+			<div className="absolute top-[90px] rounded-md p-5 z-20 left-1/2 -translate-x-1/2 bg-white w-[95%] max-w-[400px]">
 				<h1 className="font-bold mb-5">Cart</h1>
 
 				<hr className="-ml-5 -mr-5 mb-5 border-[#dddcdc]"></hr>

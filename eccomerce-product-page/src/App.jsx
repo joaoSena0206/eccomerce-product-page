@@ -48,7 +48,26 @@ function App() {
 	}
 
 	function handleAddCart() {
-		setProducts([...products, product]);
+		let alreadyInCart = false;
+
+		setProducts(
+			products.map((p) => {
+				if (p.id == product.id) {
+					alreadyInCart = true;
+
+					return {
+						...p,
+						quantity: p.quantity + product.quantity,
+					};
+				}
+
+				return p;
+			})
+		);
+
+		if (!alreadyInCart) {
+			setProducts([...products, product]);
+		}
 	}
 
 	function handleDeleteCart(productId) {

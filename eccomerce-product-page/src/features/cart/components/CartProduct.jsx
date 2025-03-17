@@ -8,7 +8,7 @@ function CartProduct({ product, onDelete }) {
 			key={product.id}
 			className="flex space-x-3 items-center justify-between">
 			<img
-				className="w-[80px] h-[80px] rounded-md"
+				className="w-[20%] h-auto rounded-md"
 				src={product.img}
 				alt={product.name}
 			/>
